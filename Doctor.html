@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Care || Doctor</title>
+  <link rel="stylesheet" href="style_hidden.css">
+  <link rel="shortcut icon" href="favicon/favicon-Copy.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+     body{
+        background-color: rgb(205, 224, 241);
+    }
+
+    #doctor,
+    #medicine,
+    #artical {
+      /* border: 1px solid black; */
+      display: flex;
+      justify-content: start;
+      padding: 0 70px;
+      align-items: center;
+    }
+
+    .doctor h1,
+    .medicine h1,
+    .artical h1 {
+      font-size: 3.5em;
+      font-weight: normal;
+      margin-left: 1.5em;
+    }
+
+    #doctor-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .doctor-img {
+      border-radius: 10px;
+      background-color: rgb(255, 255, 255);
+      width: 26%;
+    }
+
+    .doctor-img img {
+      width: 350px;
+      border-radius: 5px;
+      margin-left: 1.1em;
+      margin-top: 1.1em;
+      transition: all 0.5s ease;
+    }
+
+    .doctor-img img:hover {
+      transform: scale(1.01);
+    }
+
+    .doctor-img h2 {
+      text-align: center;
+      font-weight: normal;
+    }
+
+    .doctor-img p {
+      text-align: center;
+    }
+
+    #doctor-time {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .time {
+      text-align: left;
+      background-color: rgb(250, 245, 245);
+      font-size: 1.2em;
+      overflow-x: auto;
+      width: 100%;
+    }
+
+    th,
+    td {
+      padding-right: 8em;
+      font-size: 18px;
+      /* width: 100%; */
+      padding-left: 2em;
+      border-top: 1px solid gray;
+      line-height: 3em;
+
+    }
+
+    th {
+      background-color: rgb(21, 21, 108);
+      color: white;
+    }
+
+    #artical-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .artical-img {
+      width: 40.4%;
+      height: 480px;
+    }
+
+    .artical-img img {
+      width: 600px;
+      transition: all 0.5s ease;
+      border-radius: 10px;
+    }
+
+    .artical-img img:hover {
+      transform: scale(1.01);
+    }
+
+    .artical-img p,
+    h2 {
+      text-align: left;
+      font-weight: normal;
+    }
+
+    .artical-img button {
+      border: none;
+      cursor: pointer;
+       background-color: rgb(205, 224, 241);
+      font-size: 1em;
+    }
+
+    /* responsive for laptop */
+    @media only screen and (min-width:990px) {
+
+      #doctor,
+      #doctor-img,
+      #doctor-time,
+      #artical,
+      #artical-img {
+        height: auto;
+      }
+
+      .doctor h1 {
+        font-size: 3.5em;
+      }
+
+      .doctor-img {
+        width: 30%;
+      }
+
+
+      .doctor-img img {
+        height: auto;
+        width: 90%;
+      }
+
+      .time {
+        width: 100%;
+        margin-right: 3em;
+      }
+
+      .th,
+      td {
+        width: 100%;
+        font-size: 10px;
+        padding-left: 1em;
+      }
+
+
+      .artical-img img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+
+    /* responsive for laptop */
+    @media only screen and (max-width:988px) {
+
+      #doctor,
+      #doctor-img,
+      #doctor-time,
+      #artical,
+      #artical-img {
+        height: auto;
+      }
+
+      .doctor h1 {
+        font-size: 3.5em;
+      }
+
+      .doctor-img {
+        width: 30%;
+      }
+
+
+      .doctor-img img {
+        height: auto;
+        width: 90%;
+      }
+
+      .time {
+        width: 100%;
+      }
+
+      .th,
+      td {
+        width: 100%;
+        font-size: 0.6em;
+      }
+
+
+      .artical-img img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    /* responsive for tablet */
+    @media only screen and (max-width:774px) {
+
+      #doctor,
+      #doctor-img,
+      #doctor-time,
+      #medicine,
+      #artical,
+      #artical-img {
+        height: auto;
+      }
+
+      .doctor h1 {
+        font-size: 2.5em;
+      }
+
+      .doctor-img {
+        width: 95%;
+      }
+
+
+      .doctor-img img {
+        height: auto;
+        width: 92%;
+      }
+
+      .medicine h1 {
+        font-size: 2.5em;
+      }
+
+      .time {
+        width: 100%;
+      }
+
+      .th,
+      td {
+        width: 100%;
+        font-size: 0.6em;
+        /* height: auto; */
+      }
+
+      .artical h1 {
+        font-size: 2.5em;
+      }
+
+      .artical-img {
+        width: 80%;
+      }
+
+
+      .artical-img img {
+        max-width: 100%;
+        text-align: center;
+
+      }
+    }
+
+    /* responsive for phone */
+    @media only screen and (max-width:490px) {
+
+      #doctor,
+      #doctor-img,
+      #doctor-time,
+      #medicine,
+      #artical,
+      #artical-img {
+        height: auto;
+      }
+
+      .doctor h1 {
+        font-size: 2em;
+        margin-left: -1em;
+      }
+
+      .doctor-img {
+        width: 95%;
+      }
+
+
+      .doctor-img img {
+        height: auto;
+        width: 92%;
+      }
+
+      .medicine h1 {
+        font-size: 2em;
+        margin-left: -1em;
+      }
+
+      .time {
+        width: 100%;
+      }
+
+      .th,
+      td {
+        width: 100%;
+        font-size: 0.6em;
+        /* height: auto; */
+      }
+
+      .artical h1 {
+        font-size: 2em;
+        margin-left: -1em;
+      }
+
+      .artical-img {
+        width: 80%;
+      }
+
+
+      .artical-img img {
+        max-width: 100%;
+        text-align: center;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="nav">
+        <div class="logo">
+          <img src="logo/hospital_logo-removebg-preview.png" alt="logo">
+        </div>
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="Index.html">Home</a>
+              <a href="About.html">About Us</a>
+              <a href="Services.html">Srevices</a>
+              <a href="Doctor.html">Doctor</a>
+              <a href="Blog.html">Blog</a>
+              <a href="Contact.html">Contact Us</a>
+              <a href="Appointment.html"><button>Make an Appointment</button></a>
+            </li>
+          </ul>
+        </div>
+        <span class="menu-toggle">&#9776;</span>
+      </div>
+
+    </nav>
+  </header>
+  <main>
+    <div id="doctor">
+      <div class="doctor">
+        <h1>Doctor</h1>
+      </div>
+    </div><br></br>
+
+    <div id="doctor-img">
+      <div class="doctor-img">
+        <img src="img/doctor-img1.jpg" alt="image">
+        <h2>Ronald Richards</h2>
+        <p>Allergy & Immunology</p><br>
+      </div>
+
+      <div class="doctor-img">
+        <img src="img/doctor-img2.jpg" alt="image">
+        <h2>Wade Warren</h2>
+        <p>Infectious Diseases</p><br>
+      </div>
+
+
+      <div class="doctor-img">
+        <img src="img/doctor-img3.jpg" alt="image">
+        <h2>Jane Cooper</h2>
+        <p>Gynecology</p><br>
+      </div>
+    </div><br></br>
+
+    <div id="doctor-img">
+      <div class="doctor-img">
+        <img src="img/doctor-img4.jpg" alt="image">
+        <h2>Theresa Webb</h2>
+        <p>Pediatrics</p><br>
+      </div>
+
+      <div class="doctor-img">
+        <img src="img/doctor-img5.jpg" alt="image">
+        <h2>Leslie Alexander</h2>
+        <p>Nephrology</p><br>
+      </div>
+
+      <div class="doctor-img">
+        <img src="img/doctor-img6.jpg" alt="image">
+        <h2>Marvin McKinney</h2>
+        <p>Cardiology Specialtist</p><br>
+      </div>
+    </div><br></br>
+
+    <div id="medicine">
+      <div class="medicine">
+        <h1>Medicine Department Schedule</h1>
+      </div>
+    </div><br></br>
+
+    <div id="doctor-time">
+      <div class="time">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Schedule</th>
+            <th>Doctor</th>
+            <th>Duration</th>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>New Patient Consultations</td>
+            <td>Dr. Marvin McKinney</td>
+            <td>60 Minutes</td>
+          </tr>
+
+          <tr>
+            <td>11:00 AM</td>
+            <td>Diagnostic Testing</td>
+            <td>Dr. Leslie Alexander</td>
+            <td>60 Minutes</td>
+          </tr>
+
+          <tr>
+            <td>12:00 AM</td>
+            <td>Vaccination Appointments</td>
+            <td>Dr. Jane Cooper</td>
+            <td>60 Minutes</td>
+          </tr>
+
+          <tr>
+            <td>01:00 AM</td>
+            <td>Physical Therapy Sessions</td>
+            <td>Dr. Ronald Richards</td>
+            <td>60 Minutes</td>
+          </tr>
+
+          <tr>
+            <td>03:00 AM</td>
+            <td>Preventive Care Visits</td>
+            <td>Dr. Wade Warren</td>
+            <td>60 Minutes</td>
+          </tr>
+
+          <tr>
+            <td>04:00 AM</td>
+            <td>Medication Management</td>
+            <td>Dr. Theresa Webb</td>
+            <td>60 Minutes</td>
+          </tr>
+        </table>
+      </div>
+    </div><br></br>
+
+    <div id="artical">
+      <div class="artical">
+        <h1>Lastest Artical</h1>
+      </div>
+    </div><br></br>
+
+    <div id="artical-img">
+      <div class="artical-img">
+        <img src="img/artical-img1.jpg" alt="image">
+        <p>Jan 16, 2025 -- Diagnosis</p>
+        <h2>The comprehensive guide to understanding and managing chronic illnesses</h2><br>
+        <a href="#"><button>Read More &rarr;</button></a>
+      </div>
+
+      <div class="artical-img">
+        <img src="img/artical-img2.jpg" alt="image">
+        <p>Jan 16, 2025 -- Healthy Living</p>
+        <h2>Navigating emergency medical situations tips for staying prepared</h2><br>
+        <a href="#"><button>Read More &rarr;</button></a>
+      </div>
+    </div>
+  </main><br></br>
+  <footer>
+    <div id="footer">
+      <div class="box">
+        <img src="logo/hospital_logo-removebg-preview.png" width="100px" alt="logo">
+        <p>Our healthcare website is designed to bridge the gap between advanced medical services.</p>
+      </div>
+
+      <div class="box">
+        <h2>Services</h2>
+        <a href="Diagnostic.html">Diagnostic Excellence</a><br>
+        <a href="#">Radiation Oncology</a><br>
+        <a href="#">Pharmacy</a><br>
+        <a href="#">Operation Theater</a><br>
+        <a href="#">Emergency Care</a>
+      </div>
+
+      <div class="box">
+        <h2>Resources</h2>
+        <a href="Privacy Policy.html">Privacy Policy</a><br>
+        <a href="Term&Condition.html">Term & Condition</a><br>
+        <a href="Licensing.html">Licensing</a><br>
+        <a href="Doctor.html">Doctors</a><br>
+        <a href="Appointment.html">Appointment</a>
+      </div>
+
+      <div class="box">
+        <h2>Medical Care Info</h2>
+        <p>Siswan Babatpur, <br> Varanasi 221006</p>
+        <a href="#">+(91) 123-456-1245 <br>
+          www.medicalcare info.com</a>
+      </div>
+    </div>
+
+    <div id="icon">
+      <div class="icon">
+        <p>&copy;2025 Medical Care. All Right Reserve</p>
+      </div>
+
+      <div class="icon">
+        <a href="#"><img src="icon/instagram-icon-removebg-preview.png" alt="instagram icon" width="30px"></a>
+        <a href="#"><img src="icon/facebook-icon-removebg-preview.png" alt="facebook icon" width="30px"></a>
+        <a href="#"><img src="icon/telegran-icon-removebg-preview.png" alt="telegram icon" width="30px"></a>
+        <a href="#"><img src="icon/twitter-icon-removebg-preview.png" alt="twitter icon" width="30px"></a>
+        <a href="#"><img src="icon/linkedin-removebg-preview.png" alt="linkedin icon" width="30px"></a>
+        <a href="#"><img src="icon/youtube-removebg-preview.png" alt="youtube icon" width="30px"></a>
+      </div>
+
+      <div class="icon">
+        <p>Designed & Develop by Hindsol Software Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      toggleButton.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+
+</html>

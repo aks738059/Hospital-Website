@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_hidden.css">
+  <link rel="shortcut icon" href="favicon/favicon-Copy.ico" type="image/x-icon">
+  <title>Medical Care || Blog</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: rgb(205, 224, 241);
+    }
+
+    #artical-container{
+      background-image: url(img/blog-image.jpg);
+      height: 500px;
+      display: flex;
+      justify-content: start;
+      padding: auto;
+      align-items: center;
+      flex-wrap: wrap;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .artical-container{
+        /* border: 1px solid black; */
+        padding: 1em;
+        height: auto;
+        margin-bottom: 8em;
+        width: 80%;
+    }
+
+    .artical-container p{
+        font-size: 1.3em;
+    }
+
+    .artical-container button{
+      width: auto;
+      height: auto;
+      padding: 0.5em;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+
+   .artical-container button:hover{
+        color: white;
+        background-color: black;
+   }
+
+    #latest {
+      display: flex;
+      justify-content: start;
+      padding: 0px 70px;
+      align-items: center;
+    }
+
+    .latest h1 {
+      font-size: 3.5em;
+      margin-left: 1.5em;
+      font-weight: normal;
+    }
+
+    
+    .digital {
+      width: 65%;
+      height: 250px;
+      margin-left: 2em;
+    }
+
+    .digital h2 {
+      font-size: 2em;
+      margin-top: 8.5em;
+      color: rgb(138, 8, 4);
+      font-weight: 580;
+    }
+
+    .digital p {
+      font-size: 20px;
+      font-weight: 550;
+      color: black;
+    }
+
+    .digital button {
+      height: 35px;
+      font-size: 18px;
+      padding: 0em 1em 0.3em 1em;
+      border-radius: 10px;
+      margin-top: 1em;
+      transition: all 0.5s ease;
+      border: none;
+    }
+
+    .digital button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    #artical-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .artical-img {
+      width: 42%;
+      height: 480px;
+    }
+
+    .artical-img img {
+      width: 630px;
+      transition: all 0.5s ease;
+      border-radius: 10px;
+    }
+
+    .artical-img img:hover {
+      transform: scale(1.01);
+    }
+
+    .artical-img p,
+    h2 {
+      text-align: left;
+      font-weight: normal;
+    }
+
+    .artical-img button {
+      border: none;
+      cursor: pointer;
+      background-color: rgb(205, 224, 241);
+      font-size: 1em;
+    }
+
+    /* responsive for large screen */
+    @media only screen and (min-width:900px){
+      #artical-img{
+          height: auto;
+      }
+
+      .digital{
+          margin-top: auto;
+          width: 95%;
+      }
+
+      .managing{
+          margin-top: -4em;
+      }
+
+
+      .artical-img{
+          width: 40%;
+          height: auto;
+          margin-top: 2em;
+      }
+
+      .artical-img img{
+            width: 95%;
+      }
+    }
+
+
+    /* responsive for laptop */
+    @media only screen and (max-width:900px){
+      #artical-container,#artical-img{
+          height: auto;
+      }
+
+      .artical-container{
+          width: 95%;
+      }
+
+      .digital{
+          margin-top: auto;
+          width: 95%;
+      }
+
+      .managing{
+          margin-top: -4em;
+      }
+
+
+      .artical-img{
+          width: 45%;
+          margin-top: -0.5em;
+      }
+
+      .artical-img img{
+            width: 100%;
+      }
+    }
+
+    /* responsive for laptop */
+    @media only screen and (max-width:768px){
+      #artical-container,#artical-img{
+          height: auto;
+      }
+
+      .artical-container{
+          width: 95%;
+      }
+
+      .digital{
+          margin-top: auto;
+          width: 95%;
+      }
+
+      .digital h2{
+            font-size: 1.8em;
+      }
+
+      .digital p{
+            font-size: 17px;
+      }
+
+      .digital button{
+            font-size: 16px;
+      }
+
+      .managing{
+          margin-top: -4em;
+      }
+      .artical-img{
+          width: 45%;
+          margin-top: -1.5em;
+      }
+
+      .artical-img h2{
+          font-size: 1.3em;
+      }
+
+      .artical-img img{
+            width: 100%;
+      }
+    }
+
+     /* responsive for phone */
+    @media only screen and (max-width:480px){
+      #artical-container,#artical-img{
+          height: auto;
+      }
+
+      .artical-container{
+          width: 95%;
+      }
+
+      .latest h1{
+          font-size: 2em;
+      }
+
+      .digital{
+          margin-top: auto;
+          width: 95%;
+      }
+
+      .digital h2{
+            font-size: 1.8em;
+      }
+
+      .digital p{
+            font-size: 17px;
+      }
+
+      .digital button{
+            font-size: 16px;
+      }
+
+      .artical-img{
+          width: 95%;
+          margin-top: 3em;
+          height: auto;
+      }
+
+      .artical-img h2{
+          font-size: 1em;
+          margin-top: em;
+      }
+
+      .artical-img img{
+            width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="nav">
+        <div class="logo">
+          <img src="logo/hospital_logo-removebg-preview.png" alt="logo">
+        </div>
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="Index.html">Home</a>
+              <a href="About.html">About Us</a>
+              <a href="Services.html">Srevices</a>
+              <a href="Doctor.html">Doctor</a>
+              <a href="Blog.html">Blog</a>
+              <a href="Contact.html">Contact Us</a>
+              <a href="Appointment.html"><button>Make an Appointment</button></a>
+            </li>
+          </ul>
+        </div>
+        <span class="menu-toggle">&#9776;</span>
+      </div>
+
+    </nav>
+  </header>
+  <main>
+    <div id="latest">
+      <div class="latest">
+        <h1>Latest Blogs</h1>
+      </div>
+    </div>
+    <div id="artical-container">
+      <div class="artical-container">
+        <h1>
+          Exploring the latest advancements in telemedicine and digital healthcare
+        </h1>
+        <p>Explore how telemedicine and digital healthcare are revolutionizing patient care, offering greater accessibility, convenience, and efficiency.</p><br><br>
+        <button>Read Artical</button>
+      </div>
+    </div><br><br>
+
+    <div id="artical-img">
+      <div class="artical-img">
+        <img src="img/artical-img1.jpg" alt="image">
+        <p>Jan 16, 2025 -- Diagnosis</p>
+        <h2>The comprehensive guide to understanding and managing chronic illnesses</h2><br>
+        <a href="#"><button>Read More &rarr;</button></a>
+      </div>
+
+      <div class="artical-img">
+        <img src="img/artical-img2.jpg" alt="image">
+        <p>Jan 16, 2025 -- Healthy Living</p>
+        <h2>Navigating emergency medical situations tips for staying prepared</h2><br>
+        <a href="#"><button>Read More &rarr;</button></a>
+      </div>
+    </div><br><br>
+
+     <div id="artical-img" class="managing">
+      <div class="artical-img">
+        <img src="img/blogs_image 1.png" alt="image">
+        <p>Jan 16, 2025 -- Diagnosis</p>
+        <h2>The comprehensive guide to understanding and managing chronic illnesses</h2><br>
+        <a href="#"><button>Read More &rarr;</button></a>
+      </div>
+
+      <div class="artical-img">
+        <img src="img/blogs_image2.png" alt="image">
+        <p>Jan 16, 2025 -- Healthy Living</p>
+        <h2>Navigating emergency medical situations tips for staying prepared</h2><br>
+        <a href="#"><button>Read More &rarr;</button></a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="footer">
+      <div class="box">
+        <img src="logo/hospital_logo-removebg-preview.png" alt="logo" width="100px">
+        <p>Our healthcare website is designed to bridge the gap between advanced medical services.</p>
+      </div>
+      <div class="box">
+        <h2>Services</h2>
+        <a href="Diagnostic.html">Diagnostic Excellence</a><br>
+        <a href="#">Radiation Oncology</a><br>
+        <a href="#">Pharmacy</a><br>
+        <a href="#">Operation Theater</a><br>
+        <a href="#">Emergency Care</a>
+      </div>
+      <div class="box">
+        <h2>Resources</h2>
+        <a href="Privacy Policy.html">Privacy Policy</a><br>
+        <a href="Term&Condition.html">Term & Condition</a><br>
+        <a href="Licensing.html">Licensing</a><br>
+        <a href="Doctor.html">Doctors</a><br>
+        <a href="Appointment.html">Appointment</a>
+      </div>
+      <div class="box">
+        <h2>Medical Care Info</h2>
+        <p>Siswan Babatpur, Varanasi <br>Uttar Pradesh 221006</p>
+        <a href="#">+(91) 123-456-1245 <br>
+          www.medical care info.com</a>
+      </div>
+    </div>
+    <div id="icon">
+      <div class="icon">
+        <p>&copy;2025 Medical Care. All Right Reserve</p>
+      </div>
+      <div class="icon">
+        <a href="#"><img src="icon/instagram-icon-removebg-preview.png" alt="instagram icon" width="30px"></a>
+        <a href="#"><img src="icon/facebook-icon-removebg-preview.png" alt="facebook icon" width="30px"></a>
+        <a href="#"><img src="icon/telegran-icon-removebg-preview.png" alt="telegram icon" width="30px"></a>
+        <a href="#"><img src="icon/twitter-icon-removebg-preview.png" alt="twitter icon" width="30px"></a>
+        <a href="#"><img src="icon/linkedin-removebg-preview.png" alt="linkedin icon" width="30px"></a>
+        <a href="#"><img src="icon/youtube-removebg-preview.png" alt="youtube icon" width="30px"></a>
+      </div>
+
+      <div class="icon">
+        <p>Designed & Develop by Hindsol Software Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      toggleButton.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+
+</html>

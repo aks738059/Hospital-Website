@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>तीन कॉलम फॉर्म</title>
+    <style>
+        .form-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .form-footer {
+            grid-column: span 3;
+            /* Submit button full width me aayega */
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="form-container" action=".php">
+        <div class="form-group">
+            <label for="name">नाम</label>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">ईमेल</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">फोन</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="dob">जन्मतिथि</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">लिंग</label>
+            <select id="gender" name="gender">
+                <option value="male">पुरुष</option>
+                <option value="female">महिला</option>
+                <option value="other">अन्य</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="city">शहर</label>
+            <input type="text" id="city" name="city">
+        </div>
+
+        <div class="form-footer">
+            <button type="submit">सबमिट करें</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

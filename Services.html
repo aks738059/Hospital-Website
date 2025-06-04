@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_hidden.css">
+  <link rel="shortcut icon" href="favicon/favicon-Copy.ico" type="image/x-icon">
+  <title>Medical Care || Services</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* background-color: rgb(246, 249, 250); */
+    }
+
+     body{
+        background-color: rgb(205, 224, 241);
+    }
+
+    #service {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 0 70px;
+    }
+
+    .service h1 {
+      font-size: 3.5em;
+      font-weight: normal;
+      margin-left: 1.5em;
+    }
+
+    #service-img1,
+    #service-img2 {
+      /* border: 1px solid black; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .service-img1 {
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      border-radius: 50%;
+      padding-bottom: 1.5em;
+      border-radius: 10px 50px;
+      /* background-color: rgb(159, 217, 228); */
+      background-color: rgb(237, 231, 231);
+      width: 25%;
+      height: 430px;
+
+
+    }
+
+    .service-img1 h2,
+    li {
+      margin-left: 5px;
+      text-align: center;
+      color: black;
+    }
+
+    .service-img1 p {
+      text-align: center;
+    }
+
+    .service-img1 img {
+      text-align: center;
+      margin-left: 4.5em;
+      margin-top: 1em;
+      border-radius: 10px;
+      width: 230px;
+      /* height: auto; */
+
+    }
+
+    .service-img1:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 0px 5px black;
+      border-radius: 50px 10px;
+    }
+
+    #health-div {
+      display: flex;
+      justify-content: center;
+      background-color: rgb(237, 231, 231);
+      width: 100%;
+      border-radius: 10px;
+      justify-content: space-evenly;
+      /* margin-left: 5.4em; */
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+
+    .health-div {
+      /* border: 1px solid black; */
+      width: auto;
+      padding-left: 1em;
+    }
+
+    .health-div img {
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    #btn {
+      height: 35px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      width: 50%;
+      font-size: 16px;
+    }
+
+    #btn1 {
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    .health-div button {
+      height: 50px;
+      border-radius: 5px;
+      font-size: 1.5em;
+    }
+
+    /* responsive for large screen */
+    @media only screen and (min-width:997px) {
+
+      #service,
+      #service-img1 {
+        height: auto;
+      }
+
+      .service {
+        width: 100%;
+      }
+
+      .service-img1 {
+        width: 25%;
+        height: auto;
+      }
+
+      .service-img1 img {
+        width: 80%;
+        margin-left: 2.1em;
+        text-align: center;
+      }
+
+      .health-div img {
+        width: 98%;
+        height: auto;
+      }
+
+      #btn,
+      #btn1 {
+        min-height: 60px;
+        height: auto;
+        font-size: 16px;
+        width: 40%;
+      }
+    }
+
+    /* responsive for laptop */
+    @media only screen and (max-width:998px) {
+
+      #service,
+      #service-img1 {
+        height: auto;
+      }
+
+      .service {
+        width: 100%;
+      }
+
+      .service-img1 {
+        width: 30%;
+        height: auto;
+      }
+
+      .service-img1 img {
+        width: 88%;
+        margin-left: 1em;
+        height: auto;
+        text-align: center;
+      }
+
+      .health-div {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        /* text-align: center; */
+      }
+
+      .health-div img {
+        width: 100%;
+        height: auto;
+      }
+
+      #btn,
+      #btn1 {
+        min-height: 35px;
+        height: auto;
+        font-size: 16px;
+        width: 31%;
+      }
+    }
+
+    /* responsive for tablet */
+    @media only screen and (max-width:774px) {
+
+      #service,
+      #service-img1,
+      #health-div {
+        height: auto;
+      }
+
+      .service {
+        width: 100%;
+      }
+
+      .service-img1 {
+        width: 40%;
+        height: auto;
+        margin-top: 2em;
+      }
+
+      .service-img1 img {
+        width: 90%;
+        margin-left: 1em;
+        height: auto;
+        text-align: center;
+      }
+
+      .health-div {
+        width: auto;
+        height: auto;
+        /* justify-content: center; */
+        text-align: center;
+      }
+
+      .health-div img {
+        width: 90%;
+        height: auto;
+      }
+
+      #btn,
+      #btn1 {
+        min-height: 35px;
+        height: auto;
+        width: 95%;
+      }
+    }
+
+    /* responsive for mobile */
+    @media only screen and (max-width:490px) {
+
+      #service,
+      #service-img1,
+      #health-div {
+        height: auto;
+      }
+
+      .service {
+        width: 100%;
+      }
+
+      .service h1 {
+        font-size: 2.5em;
+        margin-left: -1em;
+        text-align: left;
+      }
+
+      .service-img1 {
+        width: 85%;
+        height: auto;
+        margin-top: 2em;
+      }
+
+      .service-img1 img {
+        width: 90%;
+        margin-left: 1em;
+        height: auto;
+        text-align: center;
+      }
+
+      .health-div {
+        width: 90%;
+        height: auto;
+        /* justify-content: center; */
+        text-align: center;
+      }
+
+      .health-div img {
+        width: 95%;
+        height: auto;
+      }
+
+      #btn,
+      #btn1 {
+        min-height: 35px;
+        height: auto;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="nav">
+        <div class="logo">
+          <img src="logo/hospital_logo-removebg-preview.png" alt="logo">
+        </div>
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="Index.html">Home</a>
+              <a href="About.html">About Us</a>
+              <a href="Services.html">Srevices</a>
+              <a href="Doctor.html">Doctor</a>
+              <a href="Blog.html">Blog</a>
+              <a href="Contact.html">Contact Us</a>
+              <a href="Appointment.html"><button>Make an Appointment</button></a>
+            </li>
+          </ul>
+        </div>
+        <span class="menu-toggle">&#9776;</span>
+      </div>
+
+    </nav>
+  </header>
+  <main>
+    <div id="service">
+      <div class="service">
+        <h1>Our Services</h1>
+      </div>
+    </div><br></br>
+
+    <div id="service-img1">
+      <div class="service-img1">
+        <img src="img/service-img1.jpg" alt="image">
+        <p>Chronic Pain Relief</p>
+        <h2>Physical Therapy</h2>
+        <hr>
+        <p>Therapy services are designed to enhance recovery <br>and improve quality of life.</p>
+      </div>
+
+      <div class="service-img1">
+        <img src="img/service-img2.jpg" alt="image">
+        <p>Health Screening</p>
+        <h2>Diagnostic Excellence</h2>
+        <hr>
+        <p>A commitment to excellence, we esure accurate <br>insights to guide effective treatment plans.</p>
+      </div>
+
+      <div class="service-img1">
+        <img src="img/service-img3.jpg" alt="image">
+        <p>Cancer Specialist</p>
+        <h2>Radiation Oncology</h2>
+        <hr>
+        <p>Combining cutting - edge technology with care,<br>we ensure peicise treatement tailored.</p>
+      </div>
+    </div><br>
+
+    <div id="service-img2">
+      <div class="service-img1">
+        <img src="img/service-img4.jpg" alt="image">
+        <p>Medication Supply</p>
+        <h2>Pharmacy</h2>
+        <hr>
+        <p>It's provides a wide range quality medications to <br>support your treatment plan.</p>
+      </div>
+
+      <div class="service-img1">
+        <img src="img/service-img5.jpg" alt="image">
+        <p>Precision Surgery</p>
+        <h2>Operation Theater</h2>
+        <hr>
+        <p>With advanced equipment and a skilled surgical team, <br>we provide precision care for all producers.</p>
+      </div>
+
+      <div class="service-img1">
+        <img src="img/service-img6.jpg" alt="image">
+        <p>Immediate Attention</p>
+        <h2>Emergency Care</h2>
+        <hr>
+        <p>We ensure prompt attention and compassionate<br>support when you need it the most.</p>
+      </div>
+    </div><br>
+
+    <div id="health-div">
+      <div class="health-div">
+        <h1>Your health a priority Reach out to <br> our experts now</h1>
+        <p>Whether you need a consultation, treatment plan, or simply someone to <br> answer your health questions,
+          we’re just a click away.</p><br>
+        <a href="#"><button id="btn">Meet Our Doctor</button></a>
+      </div>
+
+      <div class="health-div"><br>
+        <img src="img/health-img.jpg" alt="image"><br>
+        <button id="btn1">#healthandwellness</button>
+        <a href="Appointment.html"><button id="btn1">Make an Appointment</button></a><br></br>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div id="footer">
+      <div class="box">
+        <img src="logo/hospital_logo-removebg-preview.png" alt="logo" width="100px">
+        <p>Our healthcare website is designed to bridge the gap between advanced medical services.</p>
+      </div>
+
+      <div class="box">
+        <h2>Services</h2>
+        <a href="Diagnostic.html">Diagnostic Excellence</a><br>
+        <a href="#">Radiation Oncology</a><br>
+        <a href="#">Pharmacy</a><br>
+        <a href="#">Operation Theater</a><br>
+        <a href="#">Emergency Care</a>
+      </div>
+
+      <div class="box">
+        <h2>Resources</h2>
+        <a href="Privacy Policy.html">Privacy Policy</a><br>
+        <a href="Term&Condition.html">Term & Condition</a><br>
+        <a href="Licensing.html">Licensing</a><br>
+        <a href="Doctor.html">Doctors</a><br>
+        <a href="Appointment.html">Appointment</a>
+      </div>
+
+      <div class="box">
+        <h2>Medical Care Info</h2>
+        <p>Siswan Babatpur, Varanasi <br>Uttar Pradesh 221006</p>
+        <a href="#">+(91) 123-456-1245 <br>
+          www.medical care info.com</a>
+      </div>
+    </div>
+
+    <div id="icon">
+      <div class="icon">
+        <p>&copy;2025 Medical Care. All Right Reserve</p>
+      </div>
+
+      <div class="icon">
+        <a href="#"><img src="icon/instagram-icon-removebg-preview.png" alt="instagram icon" width="30px"></a>
+        <a href="#"><img src="icon/facebook-icon-removebg-preview.png" alt="facebook icon" width="30px"></a>
+        <a href="#"><img src="icon/telegran-icon-removebg-preview.png" alt="telegram icon" width="30px"></a>
+        <a href="#"><img src="icon/twitter-icon-removebg-preview.png" alt="twitter icon" width="30px"></a>
+        <a href="#"><img src="icon/linkedin-removebg-preview.png" alt="linkedin icon" width="30px"></a>
+        <a href="#"><img src="icon/youtube-removebg-preview.png" alt="youtube icon" width="30px"></a>
+      </div>
+
+      <div class="icon">
+        <p>Designed & Develop by Hindsol Software Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      toggleButton.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+
+</html>

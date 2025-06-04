@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon/favicon-Copy.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Medical Care || Contact</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+         body{
+            background-color: rgb(205, 224, 241);
+        }
+
+        #contact{
+                display: flex;
+                justify-content: start;
+                padding: 0px 70px;
+                align-items: center;
+        }
+
+        .contact h1{
+                font-size: 3.5em;
+                margin-left: 1.5em;
+                font-weight: normal;
+        }
+        /* adress container style------------- */
+        #adress-container{
+                display: flex;
+                justify-content: center;
+                height: auto;
+                width: 100%;
+                /* left: 20%; */
+                margin-top: 2em;
+                align-items: center;
+                font-size: 1.5em;
+                text-align: center;
+
+        }
+
+        .adress-container{
+                width: 82%;
+        }
+
+        .adress-container h1{
+                font-weight: normal;
+        }
+
+        /* adress container button style------------ */
+        .adress-container button{
+                font-size: 18px;
+                padding: 0px 10px 0px 10px;
+                height: 35px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.5s ease;
+        }
+
+        /* adress container button hover style------------ */
+        .adress-container button:hover{
+                background-color: black;
+                color: white;
+        }
+
+        /* contact form container style------------------- */
+        #contact-form{
+                display: flex;
+                justify-content: center;
+                margin-top: 2em;
+                height: auto;
+                align-items: center;
+                /* justify-content: space-evenly; */
+                flex-wrap: wrap;
+        }
+
+        .contact-form1{
+                /* border: 1px solid black; */
+                width: 40%;
+
+        }
+
+        /* contact form image style-------------- */
+        .contact-form img{
+                width: 80%;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+        }
+
+        .contact-form img:hover{
+                transform: scale(1.02);
+        }
+
+        .contact-form1 input{
+                width: 100%;
+                font-size: 18px;
+                background-color: rgb(205, 224, 241);
+                border-radius: 10px;
+                box-shadow: 0px 1px;
+                padding-left: 0.2em;
+                border: none;
+                border-bottom: 1px solid gray;
+                height: 35px;
+        }
+
+        /* message textarea style--------------- */
+        .contact-form1 textarea{
+                font-size: 18px;
+                background-color: rgb(205, 224, 241);
+                box-shadow: 0px 1px;
+                padding-left: 0.2em;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 1px solid gray;
+        }
+
+        /* contact form button style------------------ */
+        #button{
+                height: 35px;
+                padding: 0px 10px 0px 10px;
+                font-size: 18px;
+                background-color: white;
+                width: 30%;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                border: none;
+                border-radius: 10px;
+        }
+
+        /* contact form button hover style------------------ */
+        #button:hover{
+                background-color: black;
+                color:  white;
+        }
+
+        /* card container style--------------------- */
+        #card-container{
+                display: flex;
+                justify-content: center;
+                margin-top: 3em;
+                align-items: center;
+                flex-wrap: wrap;
+                /* justify-content: space-evenly; */
+        }
+        /* card container style---------------- */
+        .card-container{
+                border: 1px solid rgb(103, 158, 202);
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                margin-left: 0.5em;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5em;
+                height: 200px;
+                transition: all 0.5s ease;
+        }
+
+        .card-container:hover{
+                background-color: rgb(255, 253, 253);
+                transform: scale(1.05);
+        }
+
+        .card-container a{
+                text-decoration: none;
+                color: black;
+                
+        }
+
+        /* medical box style----------------- */
+        #medical-box{
+                background-color: rgb(255, 253, 253);
+                transition: all 0.5s ease;
+        }
+
+        /* medical box hover------------------ */
+        #medical-box:hover{
+              background-color: rgb(205, 224, 241);  
+        }
+
+        /* responsive for large screen */
+        @media only screen and (min-width:900px){
+                    #contact,#adress-container,#card-container{
+                        height: auto;
+                    }
+
+                    .contact-form{
+                        width: 50%;
+                        height: auto;
+                        background-size: cover;
+                        text-align: center;
+                    }
+
+                    #button{
+                        width: auto;
+                    }
+
+                    .contact-form img{
+                            width: 95%;
+                    }
+
+                    .contact-form1{
+                        width: 45%;
+                        margin-top: 2em;
+                    }
+
+                    .contact-form1 textarea{
+                            width: 100%;
+                    }
+
+                    .card-container{
+                            width: 29%;
+                    }
+        }
+
+
+        /* responsive for laptop */
+        @media only screen and (max-width:900px){
+                    #contact,#adress-container,#card-container{
+                        height: auto;
+                    }
+
+                    .contact-form{
+                        width: 95%;
+                        height: auto;
+                        background-size: cover;
+                        text-align: center;
+                    }
+
+                    .contact-form img{
+                            width: 100%;
+                    }
+
+                    .contact-form1{
+                        width: 95%;
+                        margin-top: 2em;
+                    }
+
+                    .contact-form1 textarea{
+                            width: 100%;
+                    }
+
+                    .card-container{
+                            width: 95%;
+                    }
+        }
+
+        /* responsive for tablet */
+        @media only screen and (max-width:768px){
+                    #contact,#adress-container,#card-container{
+                        height: auto;
+                    }
+
+                    .contact h1{
+                        font-size: 2.2em;
+                        margin-left: -0.9em;
+                        
+                    }
+
+                    .adress-container h1{
+                            font-size: 1.7em;
+                    }
+
+                    .adress-container p{
+                            font-size: 18px;
+                    }
+
+                    .contact-form{
+                        width: 95%;
+                        height: auto;
+                        background-size: cover;
+                        text-align: center;
+                    }
+
+                    .contact-form img{
+                            width: 100%;
+                    }
+
+                    .contact-form1{
+                        width: 95%;
+                        margin-top: 2em;
+                    }
+
+                    .contact-form1 textarea{
+                            width: 100%;
+                    }
+
+                    .card-container{
+                            width: 93%;
+                    }
+        }
+
+         /* responsive for phone */
+        @media only screen and (max-width:480px){
+                    #contact,#adress-container,#card-container{
+                        height: auto;
+                    }
+
+                    .contact h1{
+                        font-size: 2.2em;
+                        margin-left: -0.9em;
+                        
+                    }
+
+                    .adress-container h1{
+                            font-size: 1.3em;
+                    }
+
+                    .adress-container p{
+                            font-size: 18px;
+                    }
+
+                    .contact-form{
+                        width: 95%;
+                        height: auto;
+                        background-size: cover;
+                        text-align: center;
+                    }
+
+                    .contact-form img{
+                            width: 100%;
+                    }
+
+                    .contact-form1{
+                        width: 95%;
+                        margin-top: 2em;
+                    }
+
+                    .contact-form1 textarea{
+                            width: 100%;
+                    }
+
+                    .card-container{
+                            width: 90%;
+                    }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="nav">
+                <div class="logo">
+                    <img src="logo/hospital_logo-removebg-preview.png" alt="logo">
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li>
+                            <a href="Index.html">Home</a>
+                            <a href="About.html">About Us</a>
+                            <a href="Services.html">Srevices</a>
+                            <a href="Doctor.html">Doctor</a>
+                            <a href="Blog.html">Blog</a>
+                            <a href="Contact.html">Contact Us</a>
+                            <a href="Appointment.html"><button>Make an Appointment</button></a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="menu-toggle">&#9776;</span>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div id="contact">
+            <div class="contact">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+
+        <div id="adress-container">
+            <div class="adress-container">
+                <h1>Speak with our experts to address your healthcare needs</h1>
+                <p>Whether you have questions about our services, need assistance with an appointment, or require more information, our dedicated team is just a message or call away.</p>
+                <a href="#"><button>(+91) 123 456 7890 </button></a>
+            </div>
+        </div>
+        
+        <div id="contact-form">
+            <div class="contact-form">
+                <img src="img/contact_image.png" alt="image">
+            </div>
+             <div class="contact-form1">
+                <form action="contact.php" method="post">
+                    <p>We’re here to support you, feel free to reach out to us via the contact form below, or use our phone and email details for quicker assistance.</p>
+                    <label for="text" >First Name* </label>
+                    <input type="text" name="first" placeholder="Enter first name"><br>
+                    <label for="text" >Last Name* </label>
+                    <input type="text" name="last" placeholder="Enter last name"><br>
+                    <label for="email" >Email* </label>
+                    <input type="text" name="email" placeholder="xyz@gmail.com"><br>
+                    <label for="number">Phone Number* </label>
+                    <input type="number" name="phone" placeholder="(+91) 123 456 7890"><br>
+                    <label for="text">Message*</label><br>
+                    <textarea name="meaasge" cols="60" rows="6" placeholder="Type message here"></textarea><br><br>
+                    <input type="submit" name="sb" value="Submit Now" id="button">
+                </form>
+            </div>
+        </div>
+
+        <div id="card-container">
+            <div class="card-container">
+                <p>Available 24/7 to handle emergencies with swift, reliable care when it matters most.</p>
+                <a href="#"><h2>(91+) 123 456 7890</h2></a>
+            </div>
+            <div class="card-container" id="medical-box">
+                <p>Medical assistance timely medical intervention to safeguard your health during emergencies.</p>
+                <a href="#"><h2>(91+) 123 456 7890</h2></a>
+            </div>
+            <div class="card-container">
+                <p>Get accurate answers to your health-related questions from our experts.</p>
+                <a href="#"><h2>example@gmail.com</h2></a>                
+            </div>
+        </div><br>
+        
+    </main>
+    <footer>
+        <div id="footer">
+            <div class="box">
+                <img src="logo/hospital_logo-removebg-preview.png" alt="logo" width="100px">
+                <p>Our healthcare website is designed to bridge the gap between advanced medical services.</p>
+            </div>
+
+            <div class="box">
+                <h2>Services</h2>
+                <a href="Diagnostic.html">Diagnostic Excellence</a><br>
+                <a href="#">Radiation Oncology</a><br>
+                <a href="#">Pharmacy</a><br>
+                <a href="#">Operation Theater</a><br>
+                <a href="#">Emergency Care</a>
+            </div>
+
+            <div class="box">
+                <h2>Resources</h2>
+                <a href="Privacy Policy.html">Privacy Policy</a><br>
+                <a href="Term&Condition.html">Term & Condition</a><br>
+                <a href="Licensing.html">Licensing</a><br>
+                <a href="Doctor.html">Doctors</a><br>
+                <a href="Appointment.html">Appointment</a>
+            </div>
+
+            <div class="box">
+                <h2>Medical Care Info</h2>
+                <p>Siswan Babatpur, Varanasi <br>Uttar Pradesh 221006</p>
+                <a href="#">+(91) 123-456-1245 <br>
+                    www.medical care info.com</a>
+            </div>
+        </div>
+
+        <div id="icon">
+            <div class="icon">
+                <p>&copy;2025 Medical Care. All Right Reserve</p>
+            </div>
+
+            <div class="icon">
+                <a href="#"><img src="icon/instagram-icon-removebg-preview.png" alt="instagram icon" width="30px"></a>
+                <a href="#"><img src="icon/facebook-icon-removebg-preview.png" alt="facebook icon" width="30px"></a>
+                <a href="#"><img src="icon/telegran-icon-removebg-preview.png" alt="telegram icon" width="30px"></a>
+                <a href="#"><img src="icon/twitter-icon-removebg-preview.png" alt="twitter icon" width="30px"></a>
+                <a href="#"><img src="icon/linkedin-removebg-preview.png" alt="linkedin icon" width="30px"></a>
+                <a href="#"><img src="icon/youtube-removebg-preview.png" alt="youtube icon" width="30px"></a>
+            </div>
+
+            <div class="icon">
+                <p>Designed & Develop by Hindsol Software Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.querySelector(".menu-toggle");
+            const navbar = document.querySelector(".navbar");
+
+            toggleButton.addEventListener("click", function () {
+                navbar.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

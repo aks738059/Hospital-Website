@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_hidden.css">
+  <link rel="shortcut icon" href="favicon/favicon-Copy.ico" type="image/x-icon">
+  <title>Medical Care || About us</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(205, 224, 241);
+    }
+
+    #about-container {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .about-div {
+      margin-left: 2em;
+      /* border: 1px solid black; */
+      padding-left: 5em;
+    }
+
+    .about-div h1 {
+      font-size: 3.4em;
+      font-weight: normal;
+      font-weight: normal;
+    }
+
+    #title-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .health-div {
+      /* border: 1px solid black; */
+      width: 50%;
+    }
+
+    ol li {
+      list-style: disc;
+    }
+
+    .banner1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* banner image width style--------------------- */
+    .banner1 img {
+      width: 85%;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+
+    /* banner image hover style------------------ */
+    .banner1 img:hover {
+      transform: scale(1.01);
+    }
+
+    /* images container style------------------- */
+    #images-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 2em;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .image1 {
+      width: 30%;
+      height: 270px;
+      transition: all 0.5s ease;
+    }
+
+    .image1 img {
+      height: 200px;
+      opacity: 0.6;
+      border-radius: 10px;
+      width: 100%;
+
+    }
+
+    .image1:hover {
+      transform: scale(1.02);
+    }
+
+    .image1 p {
+      margin-top: -4em;
+      opacity: 0.9;
+      margin-left: 0.5em;
+      font-size: 1.4em;
+    }
+
+    #choose-container {
+      display: inline-block;
+      /* border: 1px solid black; */
+      height: auto;
+      font-size: 1.7em;
+      margin-left: 1.8em;
+    }
+
+    #choose-container h2 {
+      font-weight: normal;
+    }
+
+    /* choose container style------------------ */
+    #choose-container1 {
+      display: flex;
+      justify-content: center;
+      height: auto;
+      margin-top: 2em;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .choose-div1 {
+      width: 45%;
+      height: auto;
+    }
+
+    /* choose image style------------------- */
+    .choose-div1 img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+
+    .choose-div1 img:hover{
+          transform: scale(1.02);
+    }
+
+    .choose-div1 h2 {
+      font-weight: normal;
+      font-size: 1.8em;
+    }
+
+    .choose-div1 p {
+      font-size: 18px;
+    }
+
+    /* choose button style------------------ */
+    .choose-div1 button {
+      height: 35px;
+      font-size: 19px;
+      padding: 2px 8px 10px 8px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 1em;
+      transition: all 0.5s ease;
+    }
+
+    /* choose button hover style---------------- */
+    .choose-div1 button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    /* health-care style------------------ */
+    #health-care {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2em;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* health care heading style----------------- */
+    #health-care h2 {
+      font-size: 1.9em;
+      font-weight: normal;
+    }
+
+    /* health care paragrap style-------------- */
+    #health-care p {
+      font-size: 18px;
+    }
+
+    /* box div style------------------ */
+    #box-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 3em;
+      height: auto;
+      /* justify-content: space-evenly; */
+    }
+
+    .box-div {
+      border: 1px solid black;
+      height: 300px;
+      margin: 0.9em;
+      display: grid;
+       background-color: rgb(205, 224, 241);
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      /* align-items: center; */
+      width: 300px;
+      padding: 0px 0px 10px 0px;
+      border-radius: 50%;
+    }
+
+    .box-div:hover{
+        transform: scale(1.03);
+    }
+
+    #proud {
+      background-color: aliceblue;
+      margin-left: -2em;
+    }
+
+    .box-div h2 {
+      font-size: 2.9em;
+      font-weight: normal;
+      margin-top: 1em;
+    }
+
+    .box-div p {
+      margin-top: -5em;
+    }
+
+     /* responsive for large screen */
+    @media only screen and (min-width:900px) {
+
+      #about-container,
+      #title-container,
+      #images-container,
+      #choose-container1,#box-div {
+        height: auto;
+      }
+
+      .about-div {
+        width: 100%;
+        margin-left: -3em;
+      }
+
+      /* .health-div {
+        width: 50%;
+        margin-left: 2.3em;
+      } */
+
+      .health-div1 {
+        width: 30%;
+        margin-left: 1.5em;
+        padding: 2em;
+      }
+
+      .banner1 img {
+        width: 95%;
+      }
+
+      .image1 {
+        height: 270px;
+        width: 45%;
+      }
+
+      .image1 p {
+        margin-top: -5em;
+      }
+
+      #choose-container {
+        margin-left: 1em;
+        padding-top: 0.5em;
+      }
+
+      .choose-div1 {
+        width: 48%;
+        margin-top: 1em;
+        padding: 0.5em;
+      }
+
+      .choose-div1 button {
+        width: 35%;
+        height: auto;
+      }
+
+      #box-div{
+        width: 95%;
+      }
+
+      .box-div{
+          width: 300px;
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: row;
+          height: 300px;
+          margin-left: 1em;
+          /* margin: auto; */
+      }
+
+      .box-div h2{
+          margin-top: 1em;
+      }
+    }
+
+    /* responsive for laptop */
+    @media only screen and (max-width:900px) {
+
+      #about-container,
+      #title-container,
+      #images-container,
+      #choose-container1,#box-div {
+        height: auto;
+      }
+
+      .about-div {
+        width: 100%;
+        margin-left: -3em;
+      }
+
+      .health-div {
+        width: 100%;
+        margin-left: 2.3em;
+        /* flex-direction: column; */
+      }
+
+      .health-div1 {
+        width: 100%;
+        margin-left: 1.5em;
+        padding: 2em;
+      }
+
+      .banner1 img {
+        width: 95%;
+      }
+
+      .image1 {
+        height: 270px;
+        width: 45%;
+      }
+
+      .image1 p {
+        margin-top: -5em;
+      }
+
+      #choose-container {
+        margin-left: 1em;
+        padding-top: 0.5em;
+      }
+
+      .choose-div1 {
+        width: 95%;
+        margin-top: 1em;
+        padding: 0.5em;
+      }
+
+      .choose-div1 button {
+        width: 30%;
+        height: auto;
+      }
+
+      .box-div{
+          width: 290px;
+          height: 290px;
+          padding: auto;
+          /* margin: auto; */
+      }
+
+      .box-div h2{
+          margin-top: 1em;
+      }
+    }
+
+    /* responsive for tablet */
+    @media only screen and (max-width:768px) {
+
+      #about-container,
+      #title-container,
+      #images-container,
+      #choose-container1,#box-div {
+        height: auto;
+      }
+
+      .about-div {
+        width: 100%;
+        margin-left: -3em;
+      }
+
+      .health-div {
+        width: 100%;
+        margin-left: 2.3em;
+        /* flex-direction: column; */
+      }
+
+      .health-div1 {
+        width: 100%;
+        margin-left: 1.5em;
+        padding: 2em;
+      }
+
+      .banner1 img {
+        width: 95%;
+      }
+
+      .image1 {
+        height: 270px;
+        width: 45%;
+      }
+
+      .image1 p {
+        margin-top: -6em;
+      }
+
+      #choose-container {
+        margin-left: 1em;
+        font-size: 1.7em;
+        padding-top: 0.5em;
+      }
+
+      .choose-div1 {
+        width: 95%;
+        margin-top: 1em;
+        padding: 0.5em;
+      }
+
+      .choose-div1 button {
+        width: 32%;
+        font-size: 1.1em;
+        height: auto;
+      }
+
+      .box-div{
+          width: 280px;
+          height: 280px;
+          padding: auto;
+          /* margin: auto; */
+      }
+
+      #proud {
+      background-color: aliceblue;
+      margin-left: 1em;
+    }
+
+      .box-div h2{
+          margin-top: 1em;
+      }
+    }
+
+
+    /* responsive for phone */
+    @media only screen and (max-width:480px) {
+
+      #about-container,
+      #title-container,
+      #choose-container1,#box-div {
+        height: auto;
+      }
+
+      .about-div {
+        width: 100%;
+        margin-left: -3em;
+      }
+
+      .about-div h1 {
+        font-size: 2em;
+      }
+
+      .health-div {
+        width: 100%;
+        margin-left: 2.3em;
+        /* flex-direction: column; */
+      }
+
+      .health-div1 {
+        width: 100%;
+        margin-left: 1.5em;
+        padding: 2em;
+      }
+
+      .banner1 {
+        margin-top: -3em;
+      }
+
+      .banner1 img {
+        width: 95%;
+      }
+
+      .image1 {
+        height: 270px;
+        width: 95%;
+        margin-top: 1em;
+      }
+
+      .image1 img {
+        height: 270px;
+      }
+
+      .image1 p {
+        margin-top: -6em;
+      }
+
+      #choose-container {
+        margin-left: 1em;
+        height: auto;
+        font-size: 1.2em;
+        padding-top: 0.5em;
+      }
+
+      .choose-div1 {
+        width: 95%;
+        margin-top: 1em;
+        padding: 0.5em;
+      }
+
+      .choose-div1 img {
+        margin-top: -2em;
+      }
+
+      .choose-div1 h2 {
+        font-size: 1.5em;
+        margin-top: -0.5em;
+      }
+
+      .choose-div1 button {
+        width: 50%;
+        font-size: 1em;
+        /* padding-right: 5em; */
+        height: auto;
+      }
+
+      .box-div{
+          width: 220px;
+          height: 220px;
+          word-wrap: wrap;
+          padding: 15px;
+          /* padding-left: 1em 1em 0px 1em; */
+          /* margin: auto; */
+      }
+
+      #proud {
+      background-color: aliceblue;
+      margin-left: 1em;
+    }
+
+      .box-div h2{
+          margin-top: -0.5em;
+          font-size: 1.9em;
+      }
+
+      .box-div p{
+          font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="nav">
+        <div class="logo">
+          <img src="logo/hospital_logo-removebg-preview.png" alt="logo">
+        </div>
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="Index.html">Home</a>
+              <a href="About.html">About Us</a>
+              <a href="Services.html">Srevices</a>
+              <a href="Doctor.html">Doctor</a>
+              <a href="Blog.html">Blog</a>
+              <a href="Contact.html">Contact Us</a>
+              <a href="Appointment.html"><button>Make an Appointment</button></a>
+            </li>
+          </ul>
+        </div>
+        <span class="menu-toggle">&#9776;</span>
+      </div>
+    </nav>
+  </header>
+
+  <main><br><br>
+    <div id="about-container">
+      <div class="about-div">
+        <h1>A legacy of trust, excellence & innovation <br> in healthcare solutions</h1>
+      </div>
+    </div><br><br>
+    <div id="title-container">
+      <div class="health-div">
+        <p>Today, we stand as a trusted name in the industry, known for our advanced facilities,<br> dedicated
+          professionals & unwavering commitment to improving lives.</p>
+      </div>
+      <div class="health-div1">
+        <ol>
+          <li>Caring for life, Researching for health</li>
+        </ol>
+      </div>
+    </div><br><br>
+
+    <div id="banner1">
+      <div class="banner1">
+        <img src="banner/about_banner.png" alt="banner" width="85%">
+      </div>
+    </div><br>    
+    <div id="choose-container">
+      <h2>Why Choose us</h2>
+    </div>
+
+    <div id="choose-container1">
+      <div class="choose-div1">
+        <img src="img/choose_image.png" alt="image">
+      </div>
+
+      <div class="choose-div1">
+        <h2>Excellence in Care</h2> <br>
+        <p>Our team of skilled professionals, equipped with cutting-edge technology and compassionate expertise.</p>
+        <br><br>
+        <h2>Unmatched Healthcare Quality</h2><br>
+        <p>We ensure that patients receive not only the best possible care but also an experience centered on comfort,
+          trust, and compassion; Quality is not just a goal.</p>
+        <a href="Appointment.html"><button>Make an Appointement</button></a>
+      </div>
+    </div>
+
+    <div id="health-care">
+      <h2>A data-driven approach to better healthcare</h2><br>
+      <p>From the number of consultations to our patient satisfaction rates, we are committed to <br> delivering the
+        best possible outcomes for every individual.</p>
+    </div>
+
+    <div id="box-div">
+      <div class="box-div">
+        <h2>16+</h2>
+        <p>Vaxet has been a trusted provider of <br> exceptional healthcare services.</p>
+      </div>
+      <div class="box-div" id="proud">
+        <h2>6000+</h2>
+        <p>We are proud to serve over 6,000+ <br> patient visits annually.</p>
+      </div>
+      <div class="box-div">
+        <h2>10K+</h2>
+        <p>We take pride in the trust your health <br> & happiness are our top priorities.</p>
+      </div>
+      <div class="box-div" id="proud">
+        <h2>30+</h2>
+        <p>Each bringing a wealth of knowledge <br> & expertise to provide you.</p>
+      </div>
+    </div>
+
+    <div id="choose-container1">
+      <div class="choose-div1">
+        <h2>Inspiring pet wellness guided by passion and defined by purpose</h2><br>
+        <p>We aim to create a world where everyone has access to exceptional eyewear that not only enhances their vision
+          but also reflects their unique style. <br><br>
+
+          Through relentless innovation and unwavering dedication, we're on a mission to make premium eyewear accessible
+          to all, empowering individuals to express themselves with confidence and clarity.</p>
+        <a href="Doctor.html"><button>Our Doctor</button></a>
+      </div>
+
+      <div class="choose-div1"><br>
+        <img src="img/passion_image.png" alt="image">
+      </div>
+    </div>
+  </main><br><br>
+
+  <footer>
+    <div id="footer">
+      <div class="box">
+        <img src="logo/hospital_logo-removebg-preview.png" alt="logo" width="100px">
+        <p>Our healthcare website is designed to bridge the gap between advanced medical services.</p>
+      </div>
+
+      <div class="box">
+        <h2>Services</h2>
+        <a href="Diagnostic.html">Diagnostic Excellence</a><br>
+        <a href="#">Radiation Oncology</a><br>
+        <a href="#">Pharmacy</a><br>
+        <a href="#">Operation Theater</a><br>
+        <a href="#">Emergency Care</a>
+      </div>
+
+      <div class="box">
+        <h2>Resources</h2>
+        <a href="Privacy Policy.html">Privacy Policy</a><br>
+        <a href="Term&Condition.html">Term & Condition</a><br>
+        <a href="Licensing.html">Licensing</a><br>
+        <a href="Doctor.html">Doctors</a><br>
+        <a href="Appointment.html">Appointment</a>
+      </div>
+
+      <div class="box">
+        <h2>Medical Care Info</h2>
+        <p>Siswan Babatpur, Varanasi <br>Uttar Pradesh 221006</p>
+        <a href="#">+(91) 123-456-1245 <br>
+          www.medical care info.com</a>
+      </div>
+    </div>
+
+    <div id="icon">
+      <div class="icon">
+        <p>&copy;2025 Medical Care. All Right Reserve</p>
+      </div>
+
+      <div class="icon">
+        <a href="#"><img src="icon/instagram-icon-removebg-preview.png" alt="instagram icon" width="30px"></a>
+        <a href="#"><img src="icon/facebook-icon-removebg-preview.png" alt="facebook icon" width="30px"></a>
+        <a href="#"><img src="icon/telegran-icon-removebg-preview.png" alt="telegram icon" width="30px"></a>
+        <a href="#"><img src="icon/twitter-icon-removebg-preview.png" alt="twitter icon" width="30px"></a>
+        <a href="#"><img src="icon/linkedin-removebg-preview.png" alt="linkedin icon" width="30px"></a>
+        <a href="#"><img src="icon/youtube-removebg-preview.png" alt="youtube icon" width="30px"></a>
+      </div>
+
+      <div class="icon">
+        <p>Designed & Develop by Hindsol Software Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      toggleButton.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+
+</html>

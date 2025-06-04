@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_hidden.css">
+  <link rel="shortcut icon" href="favicon/favicon-Copy.ico" type="image/x-icon">
+  <title>Medical Care || Radiation Oncology </title>
+  <style>
+    *{
+        margin: 0px ;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+     body {
+      background-color: rgb(205, 224, 241);
+    }
+
+    /* heading style-------------- */
+    #excellence{
+            display: flex;
+            /* border: 1px solid black; */
+            justify-content: start;
+            align-items: center;
+            height: auto;
+            flex-wrap: wrap;
+    }
+
+    .excellence{
+            font-size: 1.7em;
+            margin-left: 5.8em;
+    }
+
+    .excellence h1{
+            font-weight: normal;
+    }
+
+    /* banner container style------------------ */
+    #banner-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: auto;
+            max-width: 100%;
+    }
+
+    .banner-image{
+             /* border: 1px solid black; */
+             width: 100%;
+             display: flex;
+             margin-top: 3em;
+             justify-content: center;
+             align-items: center;
+    }
+
+    .banner-image img{
+            width: 88%;
+            border-radius: 10px;
+    }
+
+    #paragraph-container{
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: auto;
+    }
+
+    /* text container style--------------- */
+    .text-container{
+            width: 68%;
+            padding: 3.2em;
+            height: auto;
+    }
+
+    .text-container h2 ,.unorder-list h2{
+            font-size: 2.2em;
+            font-weight: normal;
+    }
+
+     .text-container p{
+            font-size: 18px;
+            font-weight: normal;
+    }
+
+    .text-container ul{
+            list-style-type: disc;
+            padding-left: 1em;
+    }
+
+    #link-div{
+            width: 20%;
+            height: 350px;
+            border-radius: 10px;
+            padding: 0.5em;
+            padding-left: 1em;
+            color: white;
+            font-size: 1.4em;
+            background-color: rgb(73, 182, 232);
+    }
+
+    #link-div h2{
+        font-size: 1.5em;
+    }
+
+    #link-div a{
+            text-decoration: none;
+            color: white;
+            padding: 1.5em;
+    }
+
+    #link-div button{
+            height: 35px;
+            width: 75%;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+    }
+
+    #link-div button:hover{
+            background-color: black;
+            color: white;
+    }
+
+    #unorder-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+            height: auto;
+            width: auto;
+    }
+
+    .unorder-list{
+            /* border: 1px solid black; */
+            width: 84%;
+            /* padding-top: 2em; */
+            height: auto;
+    }
+
+    .unorder-list ul{
+            list-style-type: disc;
+            font-size: 18px;
+            /* margin-top: 2em; */
+    }
+
+    .form-div{
+            background-color: white;
+            border-radius: 10px;
+            width: 75%;
+            height: auto;
+            margin-top: -3em;
+    }
+
+    .form-div h2{
+            font-weight: normal;
+            padding: 0.5em;
+            text-align: center;
+    }
+
+    .form-container{
+            display: grid;
+            gap: 20px;
+            grid-template-columns:repeat(3, 1fr) ;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+    }
+
+    .form-group{
+            display: flex;
+            flex-direction: column;
+    }
+
+    label{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input{
+        border-radius: 5px;
+        padding: 8px;
+        /* width: 100%; */
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    .form-group textarea{
+            height: 35px;
+            border: none;
+        border-bottom: 1px solid black;
+    }
+
+     .submit-now {
+            grid-column: span 3;
+            border: none;
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+
+    .submit-now input{
+            cursor: pointer;
+            transition: all 0.5s ease;
+    }
+    /* submit button hover style */
+    .submit-now input:hover{
+            background-color: black;
+            color: white;
+    }
+
+    /* responsive for large screen */
+    @media only screen and (min-width:900px){
+        #banner-container,#paragraph-container,#unorder-list{
+            height: auto;
+            /* width: 100%; */
+        }
+
+        .banner-image{
+            width: 95%;
+        }
+
+        .banner-image img{
+              width: 95%;
+        }
+
+        .text-container{
+            width: 60%;
+            margin-top: -2em;
+        }
+
+        #link-div{
+            width: 23%;
+            height: auto;
+        }
+
+        #link-div button{
+            height: auto;
+            padding: 0.5em;
+        }
+
+        .unorder-list{
+              margin-top: 2em;
+              width: 80%;
+        }
+
+        .form-div{
+            width: 80%;
+        }
+
+        .form-div h2{
+            font-size: 2em;
+        }
+
+        .form-container,.form-group{
+            width: 100%;
+        }
+        
+        .form-group input{
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    /* responsive for laptop */
+    @media only screen and (max-width:900px){
+        #banner-container,#paragraph-container,#unorder-list{
+            height: auto;
+            /* width: 100%; */
+        }
+
+        .banner-image{
+            width: 100%;
+        }
+
+        .banner-image img{
+              width: 95%;
+        }
+
+        .text-container{
+            width: 100%;
+            margin-top: -2em;
+        }
+
+        #link-div{
+            width: 45%;
+            height: auto;
+        }
+
+        .unorder-list{
+              margin-top: 2em;
+              width: 85%;
+        }
+
+        .form-div{
+            width: 90%;
+        }
+
+        .form-container,.form-group{
+            width: 100%;
+        }
+        
+        .form-group input{
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    /* responsive for tablet */
+    @media only screen and (max-width:768px){
+        #banner-container,#paragraph-container,#unorder-list{
+            height: auto;
+            /* width: 100%; */
+        }
+
+         .excellence h1{
+              font-size: 1.5em;
+              margin-left: -3.5em;
+        }
+
+        .banner-image{
+            width: 100%;
+        }
+
+        .banner-image img{
+              width: 95%;
+        }
+
+        .text-container{
+            width: 100%;
+            margin-top: -2em;
+        }
+
+        #link-div{
+            width: 80%;
+            text-align: center;
+            height: auto;
+        }
+
+        #link-div button{
+              height: auto;
+              width: 70%;
+              padding: 0.2em;
+              text-align: center;
+              margin-left: -1em;
+        }
+
+        .unorder-list{
+              margin-top: 2em;
+              width: 85%;
+        }
+
+        .form-div{
+            width: 90%;
+            margin-top: -1em;
+        }
+
+        .form-container,.form-group{
+            width: 100%;
+        }
+        
+         #input{
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    /* responsive for phone */
+    @media only screen and (max-width:480px){
+        #banner-container,#paragraph-container,#unorder-list{
+            height: auto;
+            /* width: 100%; */
+        }
+
+         .excellence h1{
+              font-size: 1.2em;
+              /* width: 100%; */
+              margin-left: -3.5em;
+        }
+
+        .banner-image{
+            width: 100%;
+        }
+
+        .banner-image img{
+              width: 95%;
+        }
+
+        .text-container{
+            width: 100%;
+            margin-top: -2em;
+        }
+
+        .text-container h2{
+              font-size: 1.6em;
+        }
+
+        #link-div{
+            width: 90%;
+            height: auto;
+        }
+
+        #link-div button{
+              height: auto;
+              width: 70%;
+              padding: 0.2em;
+              text-align: center;
+              margin-left: -1em;
+        }
+
+        .unorder-list{
+              margin-top: 2em;
+              width: 80%;
+        }
+
+        .unorder-list h2{
+              font-size: 1.6em;
+        }
+
+        .form-div{
+            width: 90%;
+            margin-top: 1em;
+        }
+
+        .form-div h2{
+            width: auto;
+            /* margin-left: 2em; */
+            font-size: 1.2em;
+        }
+
+        .form-container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+        }
+
+        .form-group{
+            width: 100%;
+        }
+        
+         #input{
+            width: 100%;
+            height: auto;
+            /* flex-wrap: wrap; */
+        }
+
+    }
+     
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="nav">
+        <div class="logo">
+          <img src="logo/hospital_logo-removebg-preview.png" alt="logo">
+        </div>
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="Index.html">Home</a>
+              <a href="About.html">About Us</a>
+              <a href="Services.html">Srevices</a>
+              <a href="Doctor.html">Doctor</a>
+              <a href="Blog.html">Blog</a>
+              <a href="Contact.html">Contact Us</a>
+              <a href="Appointment.html"><button>Make an Appointment</button></a>
+            </li>
+          </ul>
+        </div>
+        <span class="menu-toggle">&#9776;</span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="excellence">
+        <div class="excellence">
+            <h1>Diagnostic Excellence</h1>
+        </div>
+    </div>
+
+    <div id="banner-container">
+        <div class="banner-image">
+            <img src="img/radiation_image.jpg" alt="image">
+        </div>
+    </div><br>
+
+    <div id="paragraph-container">
+        <div class="text-container">
+            <h2>Preventive Health Screenings</h2><br>
+            <p>At our clinic, we offer a comprehensive range of healthcare services designed to meet the diverse needs of our patients. Our experienced team of healthcare professionals is committed to providing personalized care and support to help you achieve your health goals. From preventive care and wellness programs to specialized treatments and therapies, we are dedicated to delivering high-quality healthcare services that prioritize your well-being.</p><br>
+            <p>Our comprehensive range of healthcare services is designed to address all aspects of your health, from preventive care to specialized treatments, we're here to support you every step of the way.</p><br>
+            <ul>
+                <li>Healthy eating for vibrant living</li>
+                <li>Mental wellness nurturing emotional health</li>
+                <li>Wellness wisdom holistic health tips</li>
+                <li>Mindful living cultivating inner balance</li>
+                <li>Nutrition essentials fuel your body right</li>
+            </ul>
+        </div>
+
+        <div class="text-container" id="link-div">
+            <div>
+                <h2>Other Services</h2>
+                <a href="Diagnostic.html"><p>Diagnostic Excellence</p></a>
+                <a href="Radiation.html"><p>Radiation Oncology</p></a>
+                <a href="Pharmacy.html"><p>Pharmacy</p></a>
+                <a href="Operation.html"><p>Operation Theater</p></a>
+                <a href="Emergency.html"><p>Emergency Care</p></a>
+            </div>
+            <a href="Appointment.html"><button>Make An Appointment</button></a>
+        </div>
+    </div>
+
+    <div id="unorder-list">
+        <div class="unorder-list">
+            <h2>Advanced Health Support</h2><br>
+            <ul>
+                <li>Swift Medical Attention: Our Emergency Care Services provide immediate medical attention, ensuring that critical situations are addressed promptly.</li><br>
+                <li>24/7 Availability: Emergencies can happen at any time. Our services are available round-the-clock, offering peace of mind knowing that help is just a call away.</li><br>
+                <li>Experienced Medical Team: Our team comprises skilled doctors, nurses, and specialists who specialize in emergency care, guaranteeing top-tier medical expertise during urgent situations.</li><br>
+                <li>Advanced Technology: Our state-of-the-art facilities are equipped with cutting-edge medical equipment, allowing for rapid diagnostics and accurate assessments.</li><br>
+                <li>Collaboration with Specialties: In cases where specialized care is necessary, our emergency care services seamlessly coordinate with other medical specialties, ensuring continuity of care.</li><br>
+                <li>Timely Treatment: Swift intervention can significantly impact outcomes. Our streamlined processes ensure minimal wait times, enabling us to deliver timely and effective treatment.</li><br>
+                <li>Patient-Centered Approach: Beyond medical attention, we prioritize your well-being and comfort. Our compassionate approach provides emotional support during challenging times.</li>
+            </ul>
+        </div>
+    </div>
+
+     <div id="banner-container">
+        <div class="banner-image">
+            <img src="img/radiation_image._1jpg.jpg" alt="image">
+        </div>
+
+        <div class="form-div" >
+            <h2>Book Appointment Now</h2>
+            <form action=".php" class="form-container">
+                <div class="form-group">
+                    <label for="text"> Full Name</label>
+                    <input type="text" name="name" id="input" placeholder="Enter full name">
+                </div>
+
+                 <div class="form-group">
+                    <label for="text">Phone number</label>
+                    <input type="number" name="phone" id="input"  placeholder="+(91) 1234567894">
+                </div>
+                
+                 <div class="form-group">
+                    <label for="text">Email adress</label>
+                    <input type="email" name="email" id="input"  placeholder="xyz@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="date"> Preferred date</label>
+                    <input type="date" name="date" id="input" >
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred time</label>
+                    <input type="time" name="date" id="input" >
+                </div>
+
+                <div class="form-group">
+                    <label for="text">Message</label>
+                    <textarea name="message" id="input" ></textarea>
+                </div>
+
+                <div class="submit-now">
+                    <input type="submit" value="Book Appointement">
+                </div>
+                
+
+            </form>
+        </div>
+    </div><br>
+  </main>
+  <footer>
+    <div id="footer">
+      <div class="box">
+        <img src="logo/hospital_logo-removebg-preview.png" alt="logo" width="100px">
+        <p>Our healthcare website is designed to bridge the gap between advanced medical services.</p>
+      </div>
+
+      <div class="box">
+       <h2>Services</h2>
+        <a href="Diagnostic.html">Diagnostic Excellence</a><br>
+        <a href="Radiation.html">Radiation Oncology</a><br>
+        <a href="Pharmacy.html">Pharmacy</a><br>
+        <a href="Operation.html">Operation Theater</a><br>
+        <a href="Emergency.html">Emergency Care</a>
+      </div>
+
+      <div class="box">
+        <h2>Resources</h2>
+        <a href="Privacy Policy.html">Privacy Policy</a><br>
+        <a href="Term&Condition.html">Term & Condition</a><br>
+        <a href="Licensing.html">Licensing</a><br>
+        <a href="Doctor.html">Doctors</a><br>
+        <a href="Appointment.html">Appointment</a>
+      </div>
+
+      <div class="box">
+        <h2>Medical Care Info</h2>
+        <p>Siswan Babatpur, Varanasi <br>Uttar Pradesh 221006</p>
+        <a href="#">+(91) 123-456-1245 <br>
+          www.medical care info.com</a>
+      </div>
+    </div>
+
+    <div id="icon">
+      <div class="icon">
+        <p>&copy;2025 Medical Care. All Right Reserve</p>
+      </div>
+
+      <div class="icon">
+        <a href="#"><img src="icon/instagram-icon-removebg-preview.png" alt="instagram icon" width="30px"></a>
+        <a href="#"><img src="icon/facebook-icon-removebg-preview.png" alt="facebook icon" width="30px"></a>
+        <a href="#"><img src="icon/telegran-icon-removebg-preview.png" alt="telegram icon" width="30px"></a>
+        <a href="#"><img src="icon/twitter-icon-removebg-preview.png" alt="twitter icon" width="30px"></a>
+        <a href="#"><img src="icon/linkedin-removebg-preview.png" alt="linkedin icon" width="30px"></a>
+        <a href="#"><img src="icon/youtube-removebg-preview.png" alt="youtube icon" width="30px"></a>
+      </div>
+
+      <div class="icon">
+        <p>Designed & Develop by Hindsol Software Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      toggleButton.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+
+</html>
